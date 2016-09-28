@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use common\widgets\SideBarWidget\SideBar;
+
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
@@ -15,6 +17,9 @@ $this->title = 'My Yii Application';
     </div>
 
     <div class="body-content">
+
+
+        <?= SideBar::widget() ?>
 
         <div class="row">
             <div class="col-lg-4">
