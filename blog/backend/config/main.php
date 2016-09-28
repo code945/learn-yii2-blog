@@ -22,7 +22,13 @@ return [
                     ]
                 ]
             ],
-        ]
+        ],
+        'redactor' => [
+            'class' => 'yii\redactor\RedactorModule',
+            'uploadDir' => __DIR__ .'/../../files',
+            'uploadUrl' => 'http://static.yii2blog.com',
+            'imageAllowExtensions'=>['jpg','png','gif'],
+        ],
     ],
     'components' => [
         'request' => [
