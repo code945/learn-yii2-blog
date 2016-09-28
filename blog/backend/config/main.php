@@ -11,7 +11,19 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'gii'=> [
+            'class' => 'yii\gii\Module',
+            'generators' => [ //here
+                'crud' => [ // generator name
+                    'class' => 'yii\gii\generators\crud\Generator', // generator class
+                    'templates' => [ //setting for out templates
+                        'backendgii' => '@backend/views/gii/crud/default', // template name => path to template
+                    ]
+                ]
+            ],
+        ]
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
